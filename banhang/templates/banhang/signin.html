@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <style class="img">
+        body {
+            background-image: url('static/banhang/img/home1_slide2.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'banhang/css/common.css' %}">
+    <link rel="stylesheet" href="{% static 'banhang/css/signup.css' %}">
+</head>
+<body>
+    <div id="root">
+        <div class="leftSide">
+            <div class="form">
+                <form action="">
+                    {% csrf_token %}
+                    <div class="header">
+                        <h2>Thư viện PTIT</h2>
+                        <small>Đăng nhập để thỏa sức mà mượn sách nào?!</small>
+                    </div>
+                    <div class="body">
+                        <div class="form-element">
+                            <input type="username" name="sdt" placeholder="Số điện thoại...">
+                        </div>
+                        <div class="form-element">
+                            <input type="password" name="password" placeholder="Mật khẩu...">
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <button id="btnLogin" class="btn btn-block btn-icon" type="submit">
+                            <span>Đăng nhập</span>
+                            <span class="material-icons-round">chevron_right</span>
+                        </button>
+                        <a href="/signup">Bạn chưa có tài khoản?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="rightSide">
+            
+        </div>
+    </div>
+
+    <script src="{% static 'banhang/js/signin.js' %}"></script>
+</body>
+</html>
